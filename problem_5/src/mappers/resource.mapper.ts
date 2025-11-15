@@ -1,4 +1,4 @@
-import { Resource } from '../entities/resource.entity';
+import { Resource } from '../repository/entities/resource.entity';
 import { ResourceResponseDto } from '../dto';
 
 export class ResourceMapper {

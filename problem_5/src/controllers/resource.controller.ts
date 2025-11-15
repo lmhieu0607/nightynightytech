@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { AppDataSource } from '../repository/data-source';
-import { Resource } from '../entities/resource.entity';
+import { Resource } from '../repository/entities/resource.entity';
 import {
   CreateResourceDto,
   UpdateResourceDto,

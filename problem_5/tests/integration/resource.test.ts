@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { DataSource } from 'typeorm';
-import { Resource } from '../../src/entities/resource.entity';
+import { Resource } from '../../src/repository/entities/resource.entity';
 
 const mockDataSource = new DataSource({
   type: 'better-sqlite3',

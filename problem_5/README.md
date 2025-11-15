@@ -67,8 +67,8 @@ The server will start at `http://localhost:3000`
 
 Once the server is running, access the interactive API documentation:
 
-- **Swagger UI**: http://localhost:3000/api-docs
-- **OpenAPI JSON**: http://localhost:3000/api-docs.json
+- **Swagger UI**: http://localhost:3000/swagger-docs
+- **OpenAPI JSON**: http://localhost:3000/swagger-docs.json
 
 ## API Endpoints
 
@@ -244,6 +244,9 @@ export class Resource extends AbstractEntity {
 
   @Column({ type: 'text', nullable: true })
   description: string;
+
+  @Column({ type: 'boolean', default: true })
+  status: boolean;
 }
 ```
 
@@ -253,9 +256,6 @@ export class Resource extends AbstractEntity {
 export abstract class AbstractEntity {
   @PrimaryGeneratedColumn()
   id: number;
-
-  @Column({ type: 'boolean', default: true })
-  status: boolean;
 
   @CreateDateColumn()
   created_at: Date;
@@ -335,19 +335,11 @@ The API uses a global exception handler that returns consistent error responses:
 }
 ```
 
-### Not Found Error (404)
+### Resource Not Found Exception (404)
 ```json
 {
   "success": false,
   "message": "Resource not found"
-}
-```
-
-### Bad Request Error (400)
-```json
-{
-  "success": false,
-  "message": "Invalid resource ID"
 }
 ```
 
