@@ -293,14 +293,6 @@ export abstract class AbstractEntity {
 - `npm run format` - Format code with Prettier
 - `npm run format:check` - Check code formatting
 
-### TypeORM Commands
-
-- `npm run migration:generate -- src/repository/migrations/MigrationName` - Generate a migration
-- `npm run migration:run` - Run pending migrations
-- `npm run migration:revert` - Revert the last migration
-- `npm run schema:sync` - Sync schema with database
-- `npm run schema:drop` - Drop all tables (destructive!)
-
 ## Docker Commands
 
 ```bash
