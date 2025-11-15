@@ -43,8 +43,8 @@ docker-compose down -v
 npm install
 ```
 
-2. **Configure environment** (optional):
-Create a `.env` file:
+2. **Configure environment**:
+Default environment variables configured in `.env` file:
 ```env
 PORT=3000
 DB_HOST=localhost
